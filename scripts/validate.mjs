@@ -48,7 +48,7 @@ for (const { dir, min, required, markers = [] } of sections) {
   }
 }
 
-for (const dir of ['assets/cards', 'assets/icons', 'assets/logos', 'assets/diagrams']) {
+for (const dir of ['assets/cards', 'assets/logos', 'assets/diagrams']) {
   const files = readdirSync(join(root, dir)).filter((f) => f.endsWith('.svg'))
   console.log(`OK    ${dir}: ${files.length} svg files`)
 }
