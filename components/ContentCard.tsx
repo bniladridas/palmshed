@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Badge from './Badge'
 import CopyButton from './CopyButton'
+import Arrow from './Arrow'
 
 function isExternal(href: string): boolean {
   return /^https?:\/\//.test(href)
@@ -73,9 +74,9 @@ export default function ContentCard({
       ) : null}
       <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 'var(--space-2)' }}>
         {isExternal(href) ? (
-          <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--green)', fontWeight: 500, fontSize: 14, textDecoration: 'none' }}>Read →</a>
+          <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--green)', fontWeight: 500, fontSize: 14, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}>Read <Arrow /></a>
         ) : (
-          <Link href={href} style={{ color: 'var(--green)', fontWeight: 500, fontSize: 14, textDecoration: 'none' }}>Read →</Link>
+          <Link href={href} style={{ color: 'var(--green)', fontWeight: 500, fontSize: 14, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}>Read <Arrow /></Link>
         )}
         {meta ? <span style={{ color: 'var(--ink-secondary)', fontSize: 13 }}>{meta}</span> : null}
       </div>

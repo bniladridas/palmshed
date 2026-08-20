@@ -5,6 +5,7 @@ import { site, withBase, absUrl } from '@/lib/site'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 import Reveal from '@/components/Reveal'
+import Arrow from '@/components/Arrow'
 
 export const dynamicParams = false
 
@@ -47,8 +48,8 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
       <div style={{ maxWidth: '66ch' }}>
         <Reveal>
           <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>
-            <a href={withBase('/architecture/')} style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none' }}>
-              ← Architecture notes
+            <a href={withBase('/architecture/')} style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+              <Arrow direction="left" /> Architecture notes
             </a>
           </div>
           <Badge tone="green">{note.topic}</Badge>
@@ -86,8 +87,8 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
           <div>
             {previous ? (
               <>
-                <p className="eyebrow" style={{ margin: '0 0 var(--space-1)' }}>
-                  ← Previous
+                <p className="eyebrow" style={{ margin: '0 0 var(--space-1)', display: 'flex', alignItems: 'center', gap: 4 }}>
+                  <Arrow direction="left" /> Previous
                 </p>
                 <a href={withBase(`/architecture/${previous.slug}/`)} style={{ color: 'var(--black)', fontWeight: 500 }}>
                   {previous.title}
@@ -98,8 +99,8 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
           <div style={{ textAlign: 'right' }}>
             {next ? (
               <>
-                <p className="eyebrow" style={{ margin: '0 0 var(--space-1)' }}>
-                  Next →
+                <p className="eyebrow" style={{ margin: '0 0 var(--space-1)', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 4 }}>
+                  Next <Arrow direction="right" />
                 </p>
                 <a href={withBase(`/architecture/${next.slug}/`)} style={{ color: 'var(--black)', fontWeight: 500 }}>
                   {next.title}

@@ -3,6 +3,7 @@ import { getArticles, getCards } from '@/lib/content'
 import { site, withBase, absUrl } from '@/lib/site'
 import ContentCard from '@/components/ContentCard'
 import Reveal from '@/components/Reveal'
+import Arrow from '@/components/Arrow'
 
 export const metadata = {
   alternates: { canonical: absUrl('/') },
@@ -134,8 +135,8 @@ export default function Home() {
                   Featured articles
                 </h2>
               </div>
-              <Link href="/articles" style={{ fontWeight: 500, fontSize: 15 }}>
-                All articles →
+              <Link href="/articles" style={{ fontWeight: 500, fontSize: 15, display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                All articles <Arrow />
               </Link>
             </div>
           </Reveal>

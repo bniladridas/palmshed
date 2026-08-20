@@ -9,6 +9,7 @@ import CopyLinkButton from '@/components/CopyLinkButton'
 import PrevNext from '@/components/PrevNext'
 import References from '@/components/References'
 import Reveal from '@/components/Reveal'
+import Arrow from '@/components/Arrow'
 
 export const dynamicParams = false
 
@@ -79,8 +80,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div>
             <header style={{ maxWidth: '66ch', marginBottom: 'var(--space-7)' }}>
             <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>
-              <a href={withBase('/articles/')} style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none' }}>
-                ← Articles
+              <a href={withBase('/articles/')} style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                <Arrow direction="left" /> Articles
               </a>
             </div>
             <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>

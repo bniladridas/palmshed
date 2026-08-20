@@ -1,6 +1,7 @@
 import { getArchNotes } from '@/lib/content'
 import { withBase } from '@/lib/site'
 import Badge from '@/components/Badge'
+import Arrow from '@/components/Arrow'
 
 export const metadata = { title: 'Architecture Notes · Palmshed' }
 
@@ -58,9 +59,9 @@ export default function ArchitecturePage() {
               </p>
               <a
                 href={withBase(`/architecture/${note.slug}/`)}
-                style={{ color: 'var(--green)', fontSize: 14, textDecoration: 'none' }}
+                style={{ color: 'var(--green)', fontSize: 14, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}
               >
-                Read the note →
+                Read the note <Arrow />
               </a>
             </div>
           </article>

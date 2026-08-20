@@ -1,115 +1,185 @@
-# Palmshed · Engineering Portfolio
+# Palmshed
 
-**A version-controlled content library and static site for public engineering work.**
+<br>
 
-Long-form articles, architecture notes, LinkedIn posts, portfolio cards, profile copy, design assets, and image prompts, all in one reusable source of truth. Everything here is production content, not placeholders.
+> A portfolio built like the work it documents:
+> carefully, honestly, and in public.
 
-## Abstract
+<br>
 
-This repository contains both the **content** and the **site** that renders it. Content lives in `docs/` as Markdown with YAML front matter, version-controlled alongside the code. At build time, the files are read, parsed, and statically generated into pages. Editing the site is editing Markdown files in a pull request.
+---
 
-The result is a durable, low-maintenance portfolio that documents engineering work without competing with it.
+<br>
 
-## Repository Structure
+This repository holds two things at once.
+
+The **content** lives in `docs/` as Markdown with YAML front matter, version-controlled alongside the code. Articles, architecture notes, LinkedIn posts, portfolio cards, profile sections, design assets, image prompts. Everything here is production, not placeholder.
+
+The **site** reads those files at build time, parses them, and generates static pages. Editing the site is editing Markdown in a pull request.
+
+<br>
+
+---
+
+<br>
+
+## The work
+
+<br>
+
+| | | |
+|---|---|---|
+| 11 | long-form articles | with diagrams and references |
+| 8 | architecture notes | focused design decisions |
+| 21 | LinkedIn posts | ready to publish |
+| 11 | portfolio cards | featured work |
+| 9 | profile sections | complete engineering profile |
+
+<br>
+
+---
+
+<br>
+
+## Structure
+
+<br>
 
 ```
-engineering-portfolio/
-├── app/                   Next.js site (App Router, React 19, TypeScript)
-│   ├── page.tsx           Home
-│   ├── articles/          Article index and detail
-│   ├── architecture/      Architecture notes
-│   ├── posts/             LinkedIn posts
-│   ├── featured/          Portfolio cards
-│   ├── open-source/       Open source page
-│   ├── about/             Profile rendered from docs/profile/
-│   ├── now/               Now page
-│   ├── changelog/         Changelog (rendered from CHANGELOG.md)
-│   ├── search/            Client-side search
-│   ├── colophon/          How this site is built
-│   ├── feed.xml/          RSS/Atom feed
-│   └── sitemap.ts         XML sitemap
-├── components/            Header, Footer, ContentCard, Markdown, TOC, etc.
-├── lib/                   Content reading, search, types, utilities
-├── docs/
-│   ├── articles/          11 long-form engineering articles
-│   ├── architecture/      8 architecture notes
-│   ├── linkedin/          21 LinkedIn posts
-│   ├── featured/          11 portfolio cards
-│   ├── profile/           Complete profile (9 sections)
-│   └── now.md             Now page content
-├── assets/
-│   ├── diagrams/          SVG diagrams for articles
-│   ├── logos/             Palmshed brand marks
-│   ├── icons/             Reusable SVG icons
-│   └── cards/             SVG card templates
-├── design-system/         Colors, typography, spacing, components
-├── prompts/               Image generation prompt library
-├── templates/             Templates for new content
-└── scripts/               Build, validate, stats, OG generation
+palmshed/
+│
+├── app/                    the site
+│   ├── articles/           index and detail
+│   ├── architecture/       notes
+│   ├── posts/              LinkedIn
+│   ├── featured/           cards
+│   ├── open-source/        projects
+│   ├── about/              profile
+│   ├── now/                current focus
+│   ├── changelog/          record of changes
+│   ├── search/             client-side index
+│   └── colophon/           how this was made
+│
+├── docs/                   the content
+│   ├── articles/
+│   ├── architecture/
+│   ├── linkedin/
+│   ├── featured/
+│   └── profile/
+│
+├── assets/                 diagrams, logos, cards
+├── design-system/          colors, type, spacing
+├── prompts/                image generation
+├── templates/              new content starters
+└── scripts/                build, validate, stats
 ```
 
-## Design Principles
+<br>
 
-The interface follows a quiet, monochrome-first aesthetic. Dark canvas as default. One green accent (`#3fb950`), the single living element in an otherwise still interface. The experience should feel like *someone carefully made this for me*, not *a company is trying to impress me*.
+---
 
-**Typography:** Inter for body, IBM Plex Sans for display, IBM Plex Mono for code. All self-hosted via `next/font`. No third-party requests, no layout shift.
+<br>
 
-**Color:** `#111110` canvas, `#e6e6e3` text, `#8a8a87` secondary, `#262623` borders. Light mode available as an override.
+## Design
 
-**Spacing:** 4px base scale. Generous whitespace. Elements breathe.
+<br>
 
-**Motion:** Stroke-draw entrance for the palm mark. Scroll-reveal for content. Interactions are fast, predictable, and almost invisible.
+Quiet. Monochrome. One green accent, the single living thing in an otherwise still frame.
 
-## Running Locally
+**Canvas** is `#111110`. Text is `#e6e6e3`. Secondary is `#8a8a87`. Borders are `#262623`. Light mode is an override, not the default.
 
-```bash
+**Type** is Inter for body, IBM Plex Sans for display, IBM Plex Mono for code. All self-hosted. No third-party requests. No layout shift.
+
+**Spacing** follows a 4px scale. Elements breathe. Whitespace does the separating.
+
+**Motion** is almost invisible. The palm mark draws itself on load. Content reveals on scroll. Interactions are fast, predictable, and quiet.
+
+<br>
+
+---
+
+<br>
+
+## Run
+
+<br>
+
+```
 npm install
-npm run dev        # http://localhost:3000
-npm run build      # static export into out/
-npm run typecheck  # TypeScript check
-npm run validate   # content structure and front matter
-npm run stats      # content inventory and word counts
+npm run dev          localhost:3000
+npm run build        static export
+npm run typecheck    typescript
+npm run validate     content checks
+npm run stats        word counts
 ```
 
-## Content Workflow
+<br>
+
+---
+
+<br>
+
+## Write
+
+<br>
 
 1. Copy `templates/article.md` into `docs/articles/`.
-2. Fill in front matter (title, slug, date, tags, intro, references).
-3. Write the article body in Markdown.
-4. Add diagrams: drop an SVG into `assets/diagrams/`, reference as `![caption](/diagrams/name.svg)`.
-5. Run `npm run build`. The site regenerates automatically.
+2. Fill the front matter: title, slug, date, tags, intro, references.
+3. Write the body in Markdown.
+4. Diagrams go in `assets/diagrams/`. Reference as `![caption](/diagrams/name.svg)`.
+5. `npm run build`. The site regenerates.
 
-## Deployment
+<br>
 
-Deployed to GitHub Pages via GitHub Actions on every push to `main`.
+---
 
-| Variable | Purpose |
+<br>
+
+## Deploy
+
+<br>
+
+GitHub Pages. GitHub Actions. Every push to `main`.
+
+| variable | purpose |
 |---|---|
-| `NEXT_PUBLIC_BASE_PATH` | Prefixes all links and assets (required for project-path deployment) |
-| `NEXT_PUBLIC_SITE_URL` | Origin for canonical URLs, sitemap, RSS, and Open Graph |
+| `NEXT_PUBLIC_BASE_PATH` | link prefix for project-path hosting |
+| `NEXT_PUBLIC_SITE_URL` | origin for canonical URLs, sitemap, RSS, Open Graph |
 
-For a custom domain: add a `CNAME` file, point DNS at GitHub Pages, and clear the two env vars. The codebase defaults to domain-root URLs.
+For a custom domain: add a `CNAME` file, point DNS, clear the two env vars.
 
-## Content Inventory
+<br>
 
-| Type | Count | Format |
-|---|---|---|
-| Articles | 11 | Long-form, with diagrams and references |
-| Architecture notes | 8 | Short, focused design decisions |
-| LinkedIn posts | 21 | Ready to publish |
-| Portfolio cards | 11 | Featured work |
-| Profile sections | 9 | Complete engineering profile |
+---
+
+<br>
 
 ## Voice
 
-Short sentences. Concrete and specific. No filler. First person, but humble. Claims are demonstrated, not asserted. Engineering honesty over marketing polish.
+<br>
+
+Short sentences. Concrete. No filler. First person, but humble. Claims are demonstrated, not asserted. Engineering honesty over marketing polish.
+
+<br>
+
+---
+
+<br>
 
 ## Status
 
-Everything is production content. The site is live, the content is real, and the references point at actual repositories.
+<br>
 
-See `CHANGELOG.md` for the complete record of changes.
+The site is live. The content is real. The references point at actual repositories. Everything here is production.
 
-## License
+See `CHANGELOG.md` for the full record.
 
-This is a personal engineering portfolio. The content and design are part of the work they document.
+<br>
+
+---
+
+<br>
+
+<br>
+
+*Built by hand. Open source. Maintained in public.*

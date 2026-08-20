@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Article } from '@/lib/types'
+import Arrow from './Arrow'
 
 export default function PrevNext({ previous, next }: { previous?: Article; next?: Article }) {
   if (!previous && !next) return null
@@ -19,8 +20,8 @@ export default function PrevNext({ previous, next }: { previous?: Article; next?
       <div>
         {previous ? (
           <>
-            <p className="eyebrow" style={{ margin: '0 0 var(--space-1)' }}>
-              ← Previous
+            <p className="eyebrow" style={{ margin: '0 0 var(--space-1)', display: 'flex', alignItems: 'center', gap: 4 }}>
+              <Arrow direction="left" /> Previous
             </p>
             <Link href={`/articles/${previous.slug}`} style={{ color: 'var(--black)', fontWeight: 500, fontSize: 15, textDecoration: 'none' }}>
               {previous.title}
@@ -31,8 +32,8 @@ export default function PrevNext({ previous, next }: { previous?: Article; next?
       <div style={{ textAlign: 'right' }}>
         {next ? (
           <>
-            <p className="eyebrow" style={{ margin: '0 0 var(--space-1)' }}>
-              Next →
+            <p className="eyebrow" style={{ margin: '0 0 var(--space-1)', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 4 }}>
+              Next <Arrow direction="right" />
             </p>
             <Link href={`/articles/${next.slug}`} style={{ color: 'var(--black)', fontWeight: 500, fontSize: 15, textDecoration: 'none' }}>
               {next.title}
