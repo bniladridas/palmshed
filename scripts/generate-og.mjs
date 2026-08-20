@@ -3,16 +3,25 @@ import { writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { ImageResponse } from 'next/dist/compiled/@vercel/og/index.node.js'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://palmshed.dev'
-
-const logo = React.createElement(
+const element = React.createElement(
   'div',
-  { style: { display: 'flex', alignItems: 'center', gap: 10 } },
+  {
+    style: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: 24,
+      background: '#111110',
+    },
+  },
   React.createElement(
     'svg',
     {
-      width: 22,
-      height: 22,
+      width: 32,
+      height: 32,
       viewBox: '0 0 24 24',
       fill: 'none',
       stroke: '#3fb950',
@@ -27,60 +36,16 @@ const logo = React.createElement(
   ),
   React.createElement(
     'span',
-    { style: { fontSize: 18, fontWeight: 500, color: '#8a8a87', letterSpacing: '-0.01em' } },
+    {
+      style: {
+        fontSize: 20,
+        fontWeight: 500,
+        color: '#8a8a87',
+        letterSpacing: '-0.01em',
+      },
+    },
     'Palmshed',
   ),
-)
-
-const title = React.createElement(
-  'div',
-  { style: { display: 'flex', flexDirection: 'column', gap: 20 } },
-  React.createElement(
-    'div',
-    {
-      style: {
-        fontSize: 13,
-        color: '#8a8a87',
-        fontWeight: 500,
-        letterSpacing: 2,
-        textTransform: 'uppercase',
-      },
-    },
-    'Software Engineer · Open Source · Developer Tools',
-  ),
-  React.createElement(
-    'div',
-    {
-      style: {
-        display: 'flex',
-        flexDirection: 'column',
-        fontSize: 44,
-        fontWeight: 500,
-        color: '#e6e6e3',
-        lineHeight: 1.1,
-        letterSpacing: '-0.02em',
-      },
-    },
-    React.createElement('span', null, 'Software that outlasts'),
-    React.createElement('span', null, 'its authors.'),
-  ),
-)
-
-const element = React.createElement(
-  'div',
-  {
-    style: {
-      width: '100%',
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      padding: 80,
-      background: '#111110',
-    },
-  },
-  logo,
-  title,
 )
 
 const image = await new ImageResponse(element, { width: 1200, height: 630 })
