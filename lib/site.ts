@@ -19,7 +19,7 @@ export const site = {
   },
 }
 
-// Sub-path the site is deployed under (e.g. "/engineering-portfolio" on
+// Sub-path the site is deployed under (e.g. "/palmshed" on
 // GitHub Pages). Empty string means the site is served at the domain root.
 // Configured via the same env var used by next.config.mjs so navigation
 // links, assets, and generated URLs stay consistent.

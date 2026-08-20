@@ -64,6 +64,11 @@ export default function Markdown({ children }: { children: string }) {
         components={{
           h2: heading('h2'),
           h3: heading('h3'),
+          table: ({ children }) => (
+            <div style={{ overflowX: 'auto' }}>
+              <table>{children}</table>
+            </div>
+          ),
           img: ({ src, alt }) => {
             const source = typeof src === 'string' ? src : undefined
             const href = source?.startsWith('/') ? withBase(source) : source
