@@ -62,6 +62,12 @@ new writing without depending on any platform.
 All diagrams are hand-authored inline SVG, drawn in the same style as the site as text files so
 they can be reviewed and changed in a diff.
 
+## Logo animation
+
+The palm mark is an SVG that draws itself on page load using stroke-dasharray and
+stroke-dashoffset. It re-animates on every route change by remounting when the pathname shifts.
+On hover it drifts slightly, a subtle cue that the element is alive.
+
 ## Hosting
 
 The build produces a static export, deployable to any static host. There is no application server
