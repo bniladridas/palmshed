@@ -7,12 +7,12 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://palmshed.dev'
 
 const logo = React.createElement(
   'div',
-  { style: { display: 'flex', alignItems: 'center', gap: 16 } },
+  { style: { display: 'flex', alignItems: 'center', gap: 10 } },
   React.createElement(
     'svg',
     {
-      width: 44,
-      height: 44,
+      width: 22,
+      height: 22,
       viewBox: '0 0 24 24',
       fill: 'none',
       stroke: '#3fb950',
@@ -27,24 +27,23 @@ const logo = React.createElement(
   ),
   React.createElement(
     'span',
-    { style: { fontSize: 40, fontWeight: 600, color: '#e6e6e3' } },
+    { style: { fontSize: 18, fontWeight: 500, color: '#8a8a87', letterSpacing: '-0.01em' } },
     'Palmshed',
   ),
 )
 
 const title = React.createElement(
   'div',
-  { style: { display: 'flex', flexDirection: 'column' } },
+  { style: { display: 'flex', flexDirection: 'column', gap: 20 } },
   React.createElement(
     'div',
     {
       style: {
-        fontSize: 24,
-        color: '#3fb950',
-        fontWeight: 600,
-        letterSpacing: 4,
+        fontSize: 13,
+        color: '#8a8a87',
+        fontWeight: 500,
+        letterSpacing: 2,
         textTransform: 'uppercase',
-        marginBottom: 16,
       },
     },
     'Software Engineer · Open Source · Developer Tools',
@@ -55,22 +54,16 @@ const title = React.createElement(
       style: {
         display: 'flex',
         flexDirection: 'column',
-        fontSize: 72,
-        fontWeight: 600,
+        fontSize: 44,
+        fontWeight: 500,
         color: '#e6e6e3',
-        lineHeight: 1.05,
+        lineHeight: 1.1,
+        letterSpacing: '-0.02em',
       },
     },
     React.createElement('span', null, 'Software that outlasts'),
     React.createElement('span', null, 'its authors.'),
   ),
-)
-
-const footer = React.createElement(
-  'div',
-  { style: { display: 'flex', justifyContent: 'space-between', color: '#8a8a87', fontSize: 24 } },
-  React.createElement('span', null, siteUrl.replace('https://', '')),
-  React.createElement('span', null, 'Maintainable systems · developer tools · open source'),
 )
 
 const element = React.createElement(
@@ -81,14 +74,13 @@ const element = React.createElement(
       height: '100%',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-between',
-      padding: 64,
+      justifyContent: 'center',
+      padding: 80,
       background: '#111110',
     },
   },
   logo,
   title,
-  footer,
 )
 
 const image = await new ImageResponse(element, { width: 1200, height: 630 })
