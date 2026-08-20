@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import HeaderSearch from './HeaderSearch'
 import ThemeToggle from './ThemeToggle'
+import { withBase } from '@/lib/site'
 
 const nav = [
   { href: '/articles', label: 'Articles' },
@@ -26,12 +27,7 @@ export default function Header() {
         }}
       >
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', color: 'var(--black)' }}>
-          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#1f883d" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M14 32v-8" />
-            <path d="M14 32h20" />
-            <path d="M14 24h20" />
-            <path d="M21 24c0-6 8-10 13-14" />
-          </svg>
+          <img src={withBase('/favicon.svg')} alt="" width="28" height="28" />
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 18 }}>Palmshed</span>
         </Link>
         <nav aria-label="Primary" className="header-nav" style={{ display: 'flex', gap: 'var(--space-5)' }}>
