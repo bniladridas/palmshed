@@ -20,8 +20,8 @@ const element = React.createElement(
   React.createElement(
     'svg',
     {
-      width: 32,
-      height: 32,
+      width: 56,
+      height: 56,
       viewBox: '0 0 24 24',
       fill: 'none',
       stroke: '#3fb950',
@@ -38,7 +38,7 @@ const element = React.createElement(
     'span',
     {
       style: {
-        fontSize: 20,
+        fontSize: 36,
         fontWeight: 500,
         color: '#8a8a87',
         letterSpacing: '-0.01em',
