@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200" font-family="Inter, IBM Plex Sans, sans-serif">
   <rect x="23" y="28" width="121" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
   <text x="83" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">contribution</text>
-  <text x="83" y="74" font-size="15" fill="#4b4b4b" text-anchor="middle">good faith</text>
+  <text x="83" y="74" font-size="13" fill="#4b4b4b" text-anchor="middle">good faith</text>
 
-  <line x1="144" y1="58" x2="167" y2="58" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M162 52 L169 58 L162 64" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="144" y1="58" x2="167" y2="58" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M162 52 L169 58 L162 64" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
   <rect x="169" y="28" width="121" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
   <text x="229" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">review</text>
-  <text x="229" y="74" font-size="15" fill="#4b4b4b" text-anchor="middle">point · suggest · why</text>
+  <text x="229" y="74" font-size="13" fill="#4b4b4b" text-anchor="middle">point · suggest · why</text>
 
-  <line x1="290" y1="58" x2="314" y2="58" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M308 52 L316 58 L308 64" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="290" y1="58" x2="314" y2="58" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M308 52 L316 58 L308 64" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
   <rect x="315" y="28" width="121" height="60" rx="10" fill="#1f883d"/>
   <text x="375" y="54" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">revision</text>
-  <text x="375" y="74" font-size="15" fill="#e6f2ea" text-anchor="middle">feedback is data</text>
+  <text x="375" y="74" font-size="13" fill="#e6f2ea" text-anchor="middle">feedback is data</text>
 
-  <line x1="436" y1="58" x2="460" y2="58" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M454 52 L462 58 L454 64" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="436" y1="58" x2="460" y2="58" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M454 52 L462 58 L454 64" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
   <rect x="462" y="28" width="115" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
   <text x="519" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">merge</text>

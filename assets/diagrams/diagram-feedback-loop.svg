@@ -1,32 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200" font-family="Inter, IBM Plex Sans, sans-serif">
-  <rect x="23" y="28" width="121" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
-  <text x="83" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">show the work</text>
-  <text x="83" y="74" font-size="15" fill="#4b4b4b" text-anchor="middle">decisions, not wins</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="630" height="200" viewBox="0 0 630 200" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect x="23" y="28" width="135" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="90" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">show the work</text>
+  <text x="90" y="74" font-size="13" fill="#4b4b4b" text-anchor="middle">decisions, not wins</text>
 
-  <line x1="144" y1="58" x2="167" y2="58" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M162 52 L169 58 L162 64" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="158" y1="58" x2="178" y2="58" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M173 52 L181 58 L173 64" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
-  <rect x="169" y="28" width="121" height="60" rx="10" fill="#1f883d"/>
-  <text x="229" y="54" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">readers audit</text>
-  <text x="229" y="74" font-size="15" fill="#e6f2ea" text-anchor="middle">edge cases, corrections</text>
+  <rect x="181" y="28" width="145" height="60" rx="10" fill="#1f883d"/>
+  <text x="253" y="54" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">readers audit</text>
+  <text x="253" y="74" font-size="13" fill="#e6f2ea" text-anchor="middle">edge cases, corrections</text>
 
-  <line x1="290" y1="58" x2="314" y2="58" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M308 52 L316 58 L308 64" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="326" y1="58" x2="346" y2="58" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M341 52 L349 58 L341 64" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
-  <rect x="315" y="28" width="121" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
-  <text x="375" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">build better</text>
-  <text x="375" y="74" font-size="15" fill="#4b4b4b" text-anchor="middle">feedback is compound</text>
+  <rect x="349" y="28" width="140" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="419" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">build better</text>
+  <text x="419" y="74" font-size="13" fill="#4b4b4b" text-anchor="middle">feedback is compound</text>
 
-  <line x1="436" y1="58" x2="460" y2="58" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M454 52 L462 58 L454 64" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="489" y1="58" x2="510" y2="58" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M505 52 L513 58 L505 64" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
-  <rect x="462" y="28" width="115" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
-  <text x="519" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">keep the</text>
-  <text x="519" y="74" font-size="15" fill="#4b4b4b" text-anchor="middle">record</text>
+  <rect x="513" y="28" width="100" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="563" y="54" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">keep the</text>
+  <text x="563" y="74" font-size="15" fill="#4b4b4b" text-anchor="middle">record</text>
 
-  <line x1="519" y1="88" x2="519" y2="130" stroke="#b0b0ad" stroke-width="2"/>
-  <line x1="519" y1="130" x2="83" y2="130" stroke="#b0b0ad" stroke-width="2"/>
-  <line x1="83" y1="130" x2="83" y2="92" stroke="#b0b0ad" stroke-width="2"/>
-  <path d="M77 100 L83 88 L89 100" fill="none" stroke="#b0b0ad" stroke-width="2"/>
-  <text x="301" y="170" font-size="15" fill="#4b4b4b" text-anchor="middle">the honest version compounds; the highlight reel doesn't</text>
+  <line x1="563" y1="88" x2="563" y2="130" stroke="#b0b0ad" stroke-width="2"/>
+  <line x1="563" y1="130" x2="90" y2="130" stroke="#b0b0ad" stroke-width="2"/>
+  <line x1="90" y1="130" x2="90" y2="92" stroke="#b0b0ad" stroke-width="2"/>
+  <path d="M84 100 L90 88 L96 100" fill="none" stroke="#b0b0ad" stroke-width="2"/>
+  <text x="326" y="170" font-size="15" fill="#4b4b4b" text-anchor="middle">the honest version compounds; the highlight reel doesn't</text>
 </svg>

@@ -3,21 +3,21 @@
   <text x="46" y="56" font-size="15" font-weight="600" fill="#ffffff">rename &amp; extract</text>
   <text x="46" y="78" font-size="15" fill="#e6f2ea">no behavior change</text>
 
-  <line x1="294" y1="60" x2="317" y2="60" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M312 54 L319 60 L312 66" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="294" y1="60" x2="317" y2="60" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M312 54 L319 60 L312 66" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
   <rect x="319" y="28" width="257" height="64" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
   <text x="343" y="56" font-size="15" font-weight="600" fill="#0d0d0d">tests still pass</text>
   <text x="343" y="78" font-size="15" fill="#4b4b4b">green at every step</text>
 
-  <line x1="577" y1="92" x2="577" y2="196" stroke="#b0b0ad" stroke-width="2" stroke-dasharray="5 5"/>
+  <line x1="586" y1="92" x2="586" y2="196" stroke="#b0b0ad" stroke-width="2" stroke-dasharray="5 5"/>
 
   <rect x="23" y="112" width="271" height="64" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
   <text x="46" y="140" font-size="15" font-weight="600" fill="#0d0d0d">behavior change</text>
   <text x="46" y="162" font-size="15" fill="#4b4b4b">the feature, on clean seams</text>
 
-  <line x1="294" y1="144" x2="317" y2="144" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M312 138 L319 144 L312 150" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="294" y1="144" x2="317" y2="144" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M312 138 L319 144 L312 150" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
   <rect x="319" y="112" width="257" height="64" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
   <text x="343" y="140" font-size="15" font-weight="600" fill="#0d0d0d">tests updated</text>

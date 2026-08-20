@@ -3,23 +3,23 @@
   <text x="96" y="57" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">entry point</text>
   <text x="96" y="77" font-size="15" fill="#e6f2ea" text-anchor="middle">start here</text>
 
-  <line x1="168" y1="62" x2="192" y2="62" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M186 56 L194 62 L186 68" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="168" y1="62" x2="192" y2="62" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M186 56 L194 62 L186 68" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
   <rect x="194" y="32" width="145" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
   <text x="266" y="57" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">service</text>
   <text x="266" y="77" font-size="15" fill="#4b4b4b" text-anchor="middle">follow the reads</text>
 
-  <line x1="339" y1="62" x2="362" y2="62" stroke="#0d0d0d" stroke-width="2"/>
-  <path d="M356 56 L364 62 L356 68" fill="none" stroke="#0d0d0d" stroke-width="2"/>
+  <line x1="339" y1="62" x2="362" y2="62" stroke="#8a8a87" stroke-width="2"/>
+  <path d="M356 56 L364 62 L356 68" fill="none" stroke="#8a8a87" stroke-width="2"/>
 
   <rect x="364" y="32" width="213" height="60" rx="10" fill="#e6f2ea" stroke="#1f883d" stroke-width="1"/>
   <text x="470" y="57" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">the load-bearing part</text>
   <text x="470" y="77" font-size="15" font-weight="600" fill="#1f883d" text-anchor="middle">deep-read this</text>
 
-  <line x1="266" y1="92" x2="266" y2="150" stroke="#b0b0ad" stroke-width="2" stroke-dasharray="5 5"/>
-  <line x1="266" y1="150" x2="96" y2="150" stroke="#b0b0ad" stroke-width="2" stroke-dasharray="5 5"/>
-  <path d="M102 144 L96 152 L90 144" fill="none" stroke="#b0b0ad" stroke-width="2"/>
+  <line x1="266" y1="92" x2="266" y2="180" stroke="#b0b0ad" stroke-width="2" stroke-dasharray="5 5"/>
+  <line x1="266" y1="180" x2="170" y2="180" stroke="#b0b0ad" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M176 174 L168 180 L176 186" fill="none" stroke="#b0b0ad" stroke-width="2"/>
 
   <rect x="23" y="150" width="145" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1" stroke-dasharray="5 5"/>
   <text x="96" y="175" font-size="15" font-weight="600" fill="#4b4b4b" text-anchor="middle">supporting code</text>
