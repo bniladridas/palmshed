@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getArticle, getArticles, formatDate } from '@/lib/content'
 import { getReadingTime, extractToc } from '@/lib/reading'
-import { site, absUrl } from '@/lib/site'
+import { site, absUrl, withBase } from '@/lib/site'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 import TableOfContents from '@/components/TableOfContents'
@@ -79,16 +79,21 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div>
             <header style={{ maxWidth: '66ch', marginBottom: 'var(--space-7)' }}>
             <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>
+              <a href={withBase('/articles/')} style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none' }}>
+                ← Articles
+              </a>
+            </div>
+            <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>
               {article.tags.map((tag) => (
                 <Badge key={tag} tone="green">
                   {tag}
                 </Badge>
               ))}
             </div>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, lineHeight: 1.1, margin: 0 }}>
+            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 38, lineHeight: 1.1, letterSpacing: '-0.02em', margin: 0 }}>
               {article.title}
             </h1>
-            <p style={{ color: 'var(--ink-secondary)', fontSize: 18, marginTop: 'var(--space-4)' }}>
+            <p style={{ color: 'var(--ink-secondary)', fontSize: 17, lineHeight: 1.6, marginTop: 'var(--space-4)' }}>
               {article.intro}
             </p>
             <div

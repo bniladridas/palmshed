@@ -52,7 +52,7 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
             </a>
           </div>
           <Badge tone="green">{note.topic}</Badge>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, lineHeight: 1.1, margin: 'var(--space-3) 0' }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 38, lineHeight: 1.1, letterSpacing: '-0.02em', margin: 'var(--space-3) 0' }}>
             {note.title}
           </h1>
           <div

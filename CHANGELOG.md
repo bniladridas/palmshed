@@ -1,41 +1,79 @@
 # Changelog
 
-## 2026-08-07
+A record of every meaningful change to the Palmshed engineering portfolio, from first commit to now.
+
+---
+
+## 2026-08-20: Design system, dark canvas
+
+### Interface
+
+- Flipped the theme: dark canvas (`#111110`) is now the default. Light mode is an override.
+- Quiet monochrome palette: `#e6e6e3` text, `#8a8a87` secondary, `#262623` borders.
+- Green accent stays: `#3fb950` (dark) / `#1f883d` (light), the one living element.
+- Removed all section dividers (borderTop), whitespace separates now.
+- Removed header border, cleaner, more open top.
+- Card hover: subtle shadow only, no translateY bounce.
+- Button hover: no micro-animation, just opacity change.
+- Copy buttons: no emoji, surface-muted background, transparent border.
+
+### Typography
+
+- Consistent 38px heading scale across all pages (was 44px).
+- `-0.02em` letter-spacing on all display headings.
+- Eyebrows: `11px` with `1.5px` tracking (was `12px/3px`).
+- Badges: `11px`, secondary ink color instead of black.
+- Prose body: `17px/1.65` with `-0.01em` tracking.
+- Blockquote: italic, thinner 2px green left border.
+
+### Logo
+
+- Animated SVG palm mark: stroke-draw entrance over 500-700ms.
+- Wordmark fades in 200ms after the mark begins.
+- Hover: subtle 1px upward drift (leaf responding to air).
+- Click: physical compression via `:active`.
+- Idle: completely still. Respects `prefers-reduced-motion`.
+
+### Assets
+
+- Updated all SVG assets to `#3fb950` green.
+- OG image generated on dark canvas.
+- Horizontal logo SVG updated for dark theme.
+
+---
+
+## 2026-08-14
+
+- Bumped `@types/node` from 26.1.2 to 26.2.0.
+
+---
+
+## 2026-08-07: Launch day
+
+### Content library
+
+- 11 long-form articles with diagrams and references to real repositories (`kit`, `auth`).
+- 8 architecture notes, 21 LinkedIn posts, 11 portfolio cards, full engineering profile.
+- Naming follows org-vs-product convention: **Palmshed** is the organization; **kit** is the CLI tool.
 
 ### Site
 
-- Redrawn all 11 article diagrams to an editorial scale: 600px canvas matching
-  the prose column, 15-16px labels, muted palette, no title bars or footer
-  takeaway lines, and arrowheads/curves on absolute coordinates.
-- Diagram captions now explain why each figure matters rather than restating
-  what it shows.
-- Removed the bordered look around diagram figures in articles.
-- Replaced dead `palmshed.dev` links in the featured cards with the live
-  GitHub Pages URLs.
-- Added lightweight CI: `ci.yml` (typecheck, content validation, build),
-  `links.yml` (weekly link check of the live site), `accessibility.yml`
-  (weekly Lighthouse audit), and `dependabot.yml` (npm + GitHub Actions).
-- Content validation now rejects em dashes anywhere in the docs.
-
-## v1.0.0 · 2026-08-07
-
-First stable release of the Palmshed engineering portfolio.
-
-### Site
-
-- Next.js 15 App Router, fully static export.
+- Next.js 16 App Router, fully static export.
 - Deployed to GitHub Pages via GitHub Actions on every push to `main`.
-- Configurable `basePath` (`NEXT_PUBLIC_BASE_PATH`): serves the GitHub Pages
-  project path today, and a custom domain root later, with no code changes.
-- Client-side search over a build-time index, RSS feed, XML sitemap, JSON-LD
-  structured data, and a build-time generated Open Graph image (`og.png`).
-- Generated `404.html` and accessible, responsive layout.
+- Configurable `basePath` (`NEXT_PUBLIC_BASE_PATH`) for project-path deployment.
+- Client-side search over a build-time index.
+- RSS feed, XML sitemap, JSON-LD structured data, build-time OG image.
+- Generated `404.html`, accessible and responsive layout.
 
-### Content
+### Polish
 
-- 11 long-form articles, each with diagrams and references to the real
-  Palmshed repositories (`kit`, `auth`).
-- 8 architecture notes, 21 LinkedIn posts, 11 portfolio cards, and a full
-  engineering profile.
-- Naming follows org-vs-product convention: **Palmshed** is the organization
-  and ecosystem; **kit** is the command-line developer tool.
+- Redrawn all 11 article diagrams to editorial scale: 600px canvas, 15-16px labels, muted palette.
+- Diagram captions explain why each figure matters, not just what it shows.
+- Added copy-to-clipboard controls for LinkedIn-ready content.
+- Added subtle scroll-reveal motion, card lift, button feedback.
+- Replaced em dashes with calmer punctuation throughout content.
+- Fixed Lighthouse accessibility failures; scoped audit assertions.
+- Made search inputs follow the theme.
+- Fixed hydration mismatch on article pages; suppressed theme flash.
+- Theme toggle: system / light / dark modes with flash-free initialization.
+- Daily rebuild scheduled for automatic publish-date rollover.
