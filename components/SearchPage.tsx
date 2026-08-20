@@ -1,13 +1,15 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { search, type SearchEntry } from '@/lib/search-utils'
 import { withBase } from '@/lib/site'
 import Badge from '@/components/Badge'
 
 export default function SearchPage() {
-  const [query, setQuery] = useState('')
+  const searchParams = useSearchParams()
+  const [query, setQuery] = useState(searchParams.get('q') ?? '')
   const [index, setIndex] = useState<SearchEntry[]>([])
   const [loading, setLoading] = useState(true)
   const inputRef = useRef<HTMLInputElement>(null)
