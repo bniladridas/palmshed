@@ -18,7 +18,7 @@ export default function Footer() {
         <span>Software that outlasts its authors.</span>
         <nav style={{ display: 'flex', gap: 'var(--space-4)', alignItems: 'center' }}>
           <a
-            href="https://github.com/bniladridas/palmshed"
+            href="https://github.com/bniladridas/palmshed/fork"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: 'var(--ink-secondary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}
