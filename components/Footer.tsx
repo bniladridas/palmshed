@@ -30,7 +30,7 @@ export default function Footer() {
           </a>
           <span style={{ color: 'var(--line)' }}>·</span>
           <a
-            href="https://github.com/bniladridas/palmshed/fork"
+            href="https://github.com/bniladridas/palmshed/forks"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: 'var(--ink-secondary)', textDecoration: 'none' }}
