@@ -4,7 +4,7 @@ title: Card Prompts
 
 # Card Prompts
 
-Each card is a wide 3:4 or 16:10 image. The design system keeps the card white with black text; the *image* can carry a subtle, structured motif, never a second color.
+Each card is a wide 3:4 or 16:10 image. The design system keeps the card on a dark canvas with light text; the *image* can carry a subtle, structured motif, never a second color.
 
 ## 1. Building Software That Lasts
 
@@ -46,4 +46,4 @@ Each card is a wide 3:4 or 16:10 image. The design system keeps the card white w
 
 > Flat vector illustration of an open book whose pages contain a minimal network of connected nodes and lines, one node highlighted in green, black and grey line work.
 
-Add the style anchor from `README.md` to every prompt. Export at 2x, confirm the green is exactly `#1f883d`.
+Add the style anchor from `README.md` to every prompt. Export at 2x, confirm the green is exactly `#3fb950`.

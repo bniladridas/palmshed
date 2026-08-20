@@ -29,7 +29,7 @@ export default function CopyButton({ text, label }: CopyButtonProps) {
       className={`copy-control${copied ? ' copy-control--copied' : ''}`}
       aria-live="polite"
     >
-      {copied ? `✓ ${copiedLabel} copied` : `📋 Copy${labelText ? ` ${labelText}` : ''}`}
+      {copied ? `${copiedLabel} copied` : `Copy${labelText ? ` ${labelText}` : ''}`}
     </button>
   )
 }

@@ -7,23 +7,24 @@ slug: colors
 
 ## Palette
 
-| Token | Value | Use |
-|---|---|---|
-| `--black` | `#0d0d0d` | Primary text, headings |
-| `--ink-secondary` | `#4b4b4b` | Secondary text, captions |
-| `--white` | `#ffffff` | Background (cards, banner, profile) |
-| `--surface-muted` | `#f6f6f4` | Subtle panel backgrounds, code blocks |
-| `--green` | `#1f883d` | Accent. Single accent, used sparingly |
-| `--green-muted` | `#e6f2ea` | Accent tints, badges, links on hover backgrounds |
-| `--line` | `#e3e3e0` | Hairline borders, dividers |
+| Token | Dark (default) | Light | Use |
+|---|---|---|---|
+| `--black` | `#e6e6e3` | `#0d0d0d` | Primary text, headings |
+| `--ink-secondary` | `#8a8a87` | `#6b6b6b` | Secondary text, captions |
+| `--white` | `#111110` | `#ffffff` | Background (cards, banner, profile) |
+| `--surface-muted` | `#1a1a18` | `#f4f4f2` | Subtle panel backgrounds, code blocks |
+| `--green` | `#3fb950` | `#1f883d` | Accent. Single accent, used sparingly |
+| `--green-muted` | `#14301f` | `#e6f2ea` | Accent tints, badges, links on hover backgrounds |
+| `--line` | `#262623` | `#e4e4e1` | Hairline borders, dividers |
 
 ## Rules
 
+- **Dark canvas is the default.** The interface lives on a near-black surface. Light mode is an override, not the base.
 - **One accent.** Green is the only accent color. If two colors are competing, one is wrong.
-- **Black text on white, always.** Green is never used as text on white for body copy. Contrast fails.
 - **Green means action or life.** Links, focus states, the Palmshed mark, "open source" chips. Not decoration.
-- **Neutrals carry structure.** Everything that isn't text or action is black, white, or grey.
-- **Accessibility:** body text at `#0d0d0d` on `#ffffff` exceeds WCAG AAA. Green on white is for large text and icons only. Check contrast at small sizes.
+- **Neutrals carry structure.** Everything that isn't text or action is dark grey or black.
+- **Quiet hierarchy.** One thing should be obvious at a time. No competing cards, badges, CTAs.
+- **Accessibility:** body text at `#e6e6e3` on `#111110` exceeds WCAG AAA. Green on dark is the accent, not body text.
 
 ## References
 

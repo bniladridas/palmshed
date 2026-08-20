@@ -1,14 +1,13 @@
 :root {
-  --black: #0d0d0d;
-  --ink-secondary: #4b4b4b;
-  --white: #ffffff;
-  --surface-muted: #f6f6f4;
-  --green: #1f883d;
-  --green-muted: #e6f2ea;
-  --green-strong: #116329;
-  --line: #e3e3e0;
-  --grid-line: rgba(227, 227, 224, 0.35);
-  --shadow: rgba(13, 13, 13, 0.06);
+  --black: #e6e6e3;
+  --ink-secondary: #8a8a87;
+  --white: #111110;
+  --surface-muted: #1a1a18;
+  --green: #3fb950;
+  --green-muted: #14301f;
+  --green-strong: #4ac26b;
+  --line: #262623;
+  --shadow: rgba(0, 0, 0, 0.4);
 
   --space-1: 4px;
   --space-2: 8px;
@@ -23,17 +22,16 @@
   --font-body: var(--font-inter), -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-[data-theme="dark"] {
-  --black: #e6e6e3;
-  --ink-secondary: #a2a2a0;
-  --white: #111110;
-  --surface-muted: #1c1c1a;
-  --green: #3fb950;
-  --green-muted: #14301f;
-  --green-strong: #4ac26b;
-  --line: #2b2b28;
-  --grid-line: rgba(230, 230, 227, 0.08);
-  --shadow: rgba(0, 0, 0, 0.5);
+[data-theme="light"] {
+  --black: #0d0d0d;
+  --ink-secondary: #6b6b6b;
+  --white: #ffffff;
+  --surface-muted: #f4f4f2;
+  --green: #1f883d;
+  --green-muted: #e6f2ea;
+  --green-strong: #116329;
+  --line: #e4e4e1;
+  --shadow: rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -49,6 +47,8 @@ body {
   font-family: var(--font-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -98,10 +98,16 @@ a:hover {
   padding: 0 var(--space-6);
 }
 
+@media (min-width: 761px) {
+  .container {
+    padding: 0 var(--space-7);
+  }
+}
+
 .eyebrow {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--ink-secondary);
 }
@@ -110,14 +116,14 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-1) var(--space-2);
+  padding: 3px var(--space-2);
   border-radius: 999px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   background: var(--surface-muted);
-  color: var(--black);
+  color: var(--ink-secondary);
 }
 
 .badge--green {
@@ -126,30 +132,34 @@ a:hover {
 }
 
 .prose {
-  max-width: 66ch;
+  max-width: 65ch;
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  color: var(--black);
 }
 
 .prose h1,
 .prose h2,
 .prose h3 {
   font-family: var(--font-display);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   margin: var(--space-8) 0 var(--space-4);
+  color: var(--black);
 }
 
 .prose h1 {
-  font-size: 40px;
+  font-size: 38px;
   margin-top: var(--space-7);
 }
 
 .prose h2 {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .prose h3 {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .prose p {
@@ -159,30 +169,47 @@ a:hover {
 
 .prose strong {
   font-weight: 600;
+  color: var(--black);
+}
+
+.prose em {
+  font-style: italic;
 }
 
 .prose ul,
 .prose ol {
   margin: var(--space-4) 0;
-  padding-left: var(--space-6);
+  padding-left: var(--space-5);
+  color: var(--black);
 }
 
 .prose li {
-  margin: var(--space-2) 0;
+  margin: var(--space-1) 0;
+  color: var(--black);
+}
+
+.prose li::marker {
+  color: var(--ink-secondary);
 }
 
 .prose blockquote {
   margin: var(--space-5) 0;
   padding-left: var(--space-4);
-  border-left: 3px solid var(--green);
+  border-left: 2px solid var(--green);
+  color: var(--ink-secondary);
+  font-style: italic;
+}
+
+.prose blockquote p {
   color: var(--ink-secondary);
 }
 
 .prose code {
   font-family: ui-monospace, "IBM Plex Mono", Menlo, monospace;
-  font-size: 0.9em;
+  font-size: 0.875em;
   background: var(--surface-muted);
-  padding: 2px 6px;
+  color: var(--black);
+  padding: 2px 5px;
   border-radius: 4px;
 }
 
@@ -192,11 +219,15 @@ a:hover {
   border-radius: 8px;
   padding: var(--space-4);
   overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--black);
 }
 
 .prose pre code {
   background: none;
   padding: 0;
+  color: inherit;
 }
 
 .prose hr {
@@ -206,8 +237,68 @@ a:hover {
 }
 
 .prose a {
+  color: var(--green);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.prose a:hover {
+  color: var(--green-strong);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-5) 0;
+  font-size: 15px;
+  color: var(--black);
+}
+
+.prose th {
+  text-align: left;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 2px solid var(--line);
+  color: var(--black);
+}
+
+.prose td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--line);
+  color: var(--black);
+}
+
+.prose del {
+  color: var(--ink-secondary);
+}
+
+.prose ins {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.prose mark {
+  background: var(--green-muted);
+  color: var(--black);
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+.prose dl {
+  margin: var(--space-4) 0;
+  color: var(--black);
+}
+
+.prose dt {
+  font-weight: 600;
+  margin-top: var(--space-3);
+  color: var(--black);
+}
+
+.prose dd {
+  margin-left: var(--space-5);
+  color: var(--ink-secondary);
 }
 
 .button {
@@ -221,7 +312,8 @@ a:hover {
   font-family: var(--font-body);
   cursor: pointer;
   border: none;
-  transition: background-color 120ms ease, transform 120ms ease;
+  transition: background-color 120ms ease;
+  text-decoration: none;
 }
 
 .button--primary {
@@ -237,11 +329,10 @@ a:hover {
 
 .button:hover {
   text-decoration: none;
-  transform: translateY(-1px);
 }
 
 .button:active {
-  transform: translateY(0);
+  opacity: 0.85;
 }
 
 .button--primary:hover {
@@ -260,27 +351,27 @@ a:hover {
 .copy-control {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   padding: 4px 10px;
-  border: 1px solid var(--line);
+  border: 1px solid transparent;
   border-radius: 999px;
-  background: var(--white);
+  background: var(--surface-muted);
   color: var(--ink-secondary);
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+  transition: background-color 120ms ease, color 120ms ease;
 }
 
 .copy-control:hover {
-  background: var(--surface-muted);
+  background: var(--line);
   color: var(--black);
 }
 
 .copy-control--copied {
-  color: var(--green);
+  color: var(--green-strong);
   border-color: var(--green);
   background: var(--green-muted);
 }
@@ -301,12 +392,11 @@ a:hover {
 }
 
 .card {
-  transition: transform 220ms ease;
+  transition: box-shadow 200ms ease;
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px var(--shadow);
+  box-shadow: 0 4px 16px var(--shadow);
 }
 
 @keyframes fade-up {
@@ -318,6 +408,11 @@ a:hover {
     opacity: 1;
     transform: none;
   }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .search-results {

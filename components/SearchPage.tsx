@@ -26,7 +26,7 @@ export default function SearchPage() {
   return (
     <div className="container" style={{ maxWidth: 760, paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <p className="eyebrow">Search</p>
-      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 40, margin: 'var(--space-2) 0 var(--space-5)' }}>
+      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 38, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-5)' }}>
         Find writing
       </h1>
       <input
@@ -39,13 +39,13 @@ export default function SearchPage() {
         onChange={(e) => setQuery(e.target.value)}
         style={{
           width: '100%',
-          padding: '14px 16px',
-          fontSize: 17,
+          padding: '12px 14px',
+          fontSize: 15,
           fontFamily: 'var(--font-body)',
           background: 'var(--white)',
           color: 'var(--black)',
           border: '1px solid var(--line)',
-          borderRadius: 10,
+          borderRadius: 8,
           outline: 'none',
         }}
       />

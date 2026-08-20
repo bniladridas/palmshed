@@ -22,7 +22,7 @@ export default function PrevNext({ previous, next }: { previous?: Article; next?
             <p className="eyebrow" style={{ margin: '0 0 var(--space-1)' }}>
               ← Previous
             </p>
-            <Link href={`/articles/${previous.slug}`} style={{ color: 'var(--black)', fontWeight: 500 }}>
+            <Link href={`/articles/${previous.slug}`} style={{ color: 'var(--black)', fontWeight: 500, fontSize: 15, textDecoration: 'none' }}>
               {previous.title}
             </Link>
           </>
@@ -34,7 +34,7 @@ export default function PrevNext({ previous, next }: { previous?: Article; next?
             <p className="eyebrow" style={{ margin: '0 0 var(--space-1)' }}>
               Next →
             </p>
-            <Link href={`/articles/${next.slug}`} style={{ color: 'var(--black)', fontWeight: 500 }}>
+            <Link href={`/articles/${next.slug}`} style={{ color: 'var(--black)', fontWeight: 500, fontSize: 15, textDecoration: 'none' }}>
               {next.title}
             </Link>
           </>

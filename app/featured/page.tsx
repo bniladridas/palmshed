@@ -8,10 +8,10 @@ export default function FeaturedPage() {
   return (
     <div className="container" style={{ paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <p className="eyebrow">Selected work</p>
-      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, margin: 'var(--space-2) 0 var(--space-3)' }}>
+      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 38, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-3)' }}>
         Featured
       </h1>
-      <p style={{ color: 'var(--ink-secondary)', fontSize: 18, maxWidth: '52ch' }}>
+      <p style={{ color: 'var(--ink-secondary)', fontSize: 17, lineHeight: 1.6, maxWidth: '52ch' }}>
         The cards behind the featured section of the profile: articles, projects, and open source.
       </p>
 

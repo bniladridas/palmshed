@@ -15,10 +15,10 @@ export default function NowPage() {
         <p className="eyebrow">Now</p>
         <Badge tone="green">Updated</Badge>
       </div>
-      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, margin: 'var(--space-2) 0 var(--space-4)' }}>
+      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 38, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-4)' }}>
         Now
       </h1>
-      <p style={{ color: 'var(--ink-secondary)', fontSize: 14, margin: '0 0 var(--space-5)' }}>
+      <p style={{ color: 'var(--ink-secondary)', fontSize: 13, margin: '0 0 var(--space-5)' }}>
         Last updated: {formatDate(new Date().toISOString())}
       </p>
       <Markdown>{content}</Markdown>

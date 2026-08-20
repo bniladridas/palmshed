@@ -24,10 +24,7 @@ export default function Home() {
     <>
       <section
         style={{
-          padding: 'var(--space-8) 0',
-          borderBottom: '1px solid var(--line)',
-          background:
-            'repeating-linear-gradient(0deg, transparent 0 39px, var(--grid-line) 39px 40px)',
+          padding: 'var(--space-8) 0 var(--space-7)',
         }}
       >
         <div className="container">
@@ -38,8 +35,9 @@ export default function Home() {
             <h1
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(40px, 6vw, 72px)',
+                fontSize: 'clamp(38px, 5.5vw, 68px)',
                 lineHeight: 1.05,
+                letterSpacing: '-0.025em',
                 margin: 0,
                 maxWidth: '18ch',
                 fontWeight: 600,
@@ -52,7 +50,8 @@ export default function Home() {
               style={{
                 maxWidth: '52ch',
                 color: 'var(--ink-secondary)',
-                fontSize: 19,
+                fontSize: 18,
+                lineHeight: 1.6,
                 marginTop: 'var(--space-5)',
                 marginBottom: 'var(--space-6)',
               }}
@@ -73,11 +72,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ padding: 'var(--space-8) 0' }}>
+      <section style={{ padding: 'var(--space-7) 0 var(--space-8)' }}>
         <div className="container">
           <Reveal>
             <p className="eyebrow">What I build</p>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 var(--space-5)' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-5)' }}>
               Systems, tools, and open source
             </h2>
           </Reveal>
@@ -103,17 +102,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ padding: 'var(--space-8) 0', borderTop: '1px solid var(--line)' }}>
+      <section style={{ padding: 'var(--space-7) 0 var(--space-8)' }}>
         <div className="container">
           <Reveal>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
               <div>
                 <p className="eyebrow">Writing</p>
-                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 0' }}>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 0' }}>
                   Featured articles
                 </h2>
               </div>
-              <Link href="/articles" style={{ fontWeight: 500 }}>
+              <Link href="/articles" style={{ fontWeight: 500, fontSize: 15 }}>
                 All articles →
               </Link>
             </div>
@@ -150,7 +149,7 @@ export default function Home() {
             {articles.slice(0, 5).map((article) => (
               <li
                 key={article.slug}
-                style={{ borderBottom: '1px solid var(--line)', padding: 'var(--space-4) 0' }}
+                style={{ borderBottom: '1px solid var(--line)', padding: 'var(--space-3) 0' }}
               >
                 <Link
                   href={`/articles/${article.slug}`}
@@ -160,10 +159,11 @@ export default function Home() {
                     gap: 'var(--space-4)',
                     alignItems: 'baseline',
                     color: 'var(--black)',
+                    textDecoration: 'none',
                   }}
                 >
-                  <span style={{ fontWeight: 500 }}>{article.title}</span>
-                  <span style={{ color: 'var(--ink-secondary)', fontSize: 14, whiteSpace: 'nowrap' }}>
+                  <span style={{ fontWeight: 500, fontSize: 15 }}>{article.title}</span>
+                  <span style={{ color: 'var(--ink-secondary)', fontSize: 13, whiteSpace: 'nowrap' }}>
                     {article.tags[0] ?? ''}
                   </span>
                 </Link>
@@ -173,14 +173,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ padding: 'var(--space-8) 0', borderTop: '1px solid var(--line)' }}>
+      <section style={{ padding: 'var(--space-7) 0 var(--space-8)' }}>
         <div className="container" style={{ maxWidth: '60ch' }}>
           <Reveal>
             <p className="eyebrow">Open source</p>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 var(--space-3)' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-3)' }}>
               Built and maintained in public
             </h2>
-            <p style={{ color: 'var(--ink-secondary)', fontSize: 18 }}>
+            <p style={{ color: 'var(--ink-secondary)', fontSize: 18, lineHeight: 1.6 }}>
               Palmshed is developed in the open: the code, the design notes, and the mistakes.
               Building in public changed how I work, and the practice matters more than the code.
             </p>
@@ -196,14 +196,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ padding: 'var(--space-8) 0', borderTop: '1px solid var(--line)' }}>
+      <section style={{ padding: 'var(--space-7) 0 var(--space-8)' }}>
         <div className="container" style={{ maxWidth: '60ch' }}>
           <Reveal>
             <p className="eyebrow">Contact</p>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 var(--space-3)' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-3)' }}>
               Let&rsquo;s talk about software that lasts
             </h2>
-            <p style={{ color: 'var(--ink-secondary)', fontSize: 18 }}>
+            <p style={{ color: 'var(--ink-secondary)', fontSize: 18, lineHeight: 1.6 }}>
               I write about maintainable systems and developer tools, and I&rsquo;m happy to talk
               about both: systems design, code review, or building in public.
             </p>

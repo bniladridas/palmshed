@@ -12,10 +12,10 @@ export default function OpenSourcePage() {
   return (
     <div className="container" style={{ paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <p className="eyebrow">Open Source</p>
-      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, margin: 'var(--space-2) 0 var(--space-3)' }}>
+      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 38, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-3)' }}>
         Open source
       </h1>
-      <p style={{ color: 'var(--ink-secondary)', fontSize: 18, maxWidth: '52ch' }}>
+      <p style={{ color: 'var(--ink-secondary)', fontSize: 17, lineHeight: 1.6, maxWidth: '52ch' }}>
         Building in public, contributing with intention, and treating strangers&rsquo; time as
         precious. The practice matters more than the code.
       </p>

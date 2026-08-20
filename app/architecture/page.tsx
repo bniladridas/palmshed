@@ -29,10 +29,10 @@ export default function ArchitecturePage() {
   return (
     <div className="container" style={{ paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <p className="eyebrow">Engineering Notes</p>
-      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, margin: 'var(--space-2) 0 var(--space-3)' }}>
+      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 38, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-3)' }}>
         Architecture notes
       </h1>
-      <p style={{ color: 'var(--ink-secondary)', fontSize: 18, maxWidth: '52ch' }}>
+      <p style={{ color: 'var(--ink-secondary)', fontSize: 17, lineHeight: 1.6, maxWidth: '52ch' }}>
         Short, focused notes on the systems I build and maintain. Each one captures a design
         decision, the reasoning behind it, and the rules that survived contact with production.
       </p>
@@ -42,23 +42,23 @@ export default function ArchitecturePage() {
           <article
             key={note.slug}
             style={{
-              borderBottom: '1px solid var(--ink-border)',
+              borderBottom: '1px solid var(--line)',
               padding: 'var(--space-5) 0',
             }}
           >
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
               <Badge>{TOPIC_LABEL[note.topic] || note.topic}</Badge>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22, margin: 0 }}>
-                <a href={withBase(`/architecture/${note.slug}/`)} style={{ color: 'var(--ink)', textDecoration: 'none' }}>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 20, letterSpacing: '-0.01em', margin: 0 }}>
+                <a href={withBase(`/architecture/${note.slug}/`)} style={{ color: 'var(--black)', textDecoration: 'none' }}>
                   {note.title}
                 </a>
               </h2>
-              <p style={{ color: 'var(--ink-secondary)', margin: 0, maxWidth: '64ch' }}>
+              <p style={{ color: 'var(--ink-secondary)', margin: 0, maxWidth: '64ch', fontSize: 15, lineHeight: 1.5 }}>
                 {excerpt(note.content)}
               </p>
               <a
                 href={withBase(`/architecture/${note.slug}/`)}
-                style={{ color: 'var(--accent)', fontSize: 14, textDecoration: 'none' }}
+                style={{ color: 'var(--green)', fontSize: 14, textDecoration: 'none' }}
               >
                 Read the note →
               </a>

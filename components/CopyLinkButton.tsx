@@ -17,7 +17,7 @@ export default function CopyLinkButton() {
 
   return (
     <button type="button" onClick={copy} className="button button--secondary" aria-live="polite">
-      {copied ? 'Link copied ✓' : 'Copy link'}
+      {copied ? 'Copied' : 'Copy link'}
     </button>
   )
 }

@@ -18,7 +18,7 @@ export default function TableOfContents({ items }: { items: TocItem[] }) {
           >
             <a
               href={`#${item.id}`}
-              style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none' }}
+              style={{ color: 'var(--ink-secondary)', fontSize: 13, textDecoration: 'none' }}
             >
               {item.text}
             </a>

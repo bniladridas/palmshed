@@ -26,15 +26,16 @@ export default function HeaderSearch() {
         onChange={(e) => setQ(e.target.value)}
         style={{
           padding: '6px 10px',
-          fontSize: 14,
+          fontSize: 13,
           fontFamily: 'var(--font-body)',
-          background: 'var(--white)',
+          background: 'var(--surface-muted)',
           color: 'var(--black)',
-          border: '1px solid var(--line)',
-          borderRadius: 8,
+          border: '1px solid transparent',
+          borderRadius: 6,
           width: 130,
           maxWidth: '100%',
           outline: 'none',
+          transition: 'border-color 120ms ease',
         }}
       />
     </form>

@@ -61,7 +61,11 @@ const ORDER: Theme[] = ['system', 'light', 'dark']
 export function applyTheme() {
   if (typeof window === 'undefined') return
   const theme = effectiveTheme()
-  document.documentElement.dataset.theme = theme
+  if (theme === 'light') {
+    document.documentElement.dataset.theme = 'light'
+  } else {
+    delete document.documentElement.dataset.theme
+  }
 }
 
 export default function ThemeToggle() {
@@ -96,15 +100,15 @@ export default function ThemeToggle() {
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: 34,
-        height: 34,
+        width: 32,
+        height: 32,
         padding: 0,
         border: '1px solid var(--line)',
-        borderRadius: 8,
+        borderRadius: 6,
         background: 'var(--white)',
-        color: 'var(--black)',
+        color: 'var(--ink-secondary)',
         cursor: 'pointer',
-        transition: 'background-color 120ms ease, color 120ms ease, border-color 120ms ease',
+        transition: 'background-color 120ms ease, color 120ms ease',
       }}
     >
       {icon}

@@ -15,7 +15,7 @@ const logo = React.createElement(
       height: 44,
       viewBox: '0 0 24 24',
       fill: 'none',
-      stroke: '#24d455',
+      stroke: '#3fb950',
       strokeWidth: 1.5,
       strokeLinecap: 'round',
       strokeLinejoin: 'round',
@@ -27,7 +27,7 @@ const logo = React.createElement(
   ),
   React.createElement(
     'span',
-    { style: { fontSize: 40, fontWeight: 600, color: '#0d0d0d' } },
+    { style: { fontSize: 40, fontWeight: 600, color: '#e6e6e3' } },
     'Palmshed',
   ),
 )
@@ -40,7 +40,7 @@ const title = React.createElement(
     {
       style: {
         fontSize: 24,
-        color: '#1f883d',
+        color: '#3fb950',
         fontWeight: 600,
         letterSpacing: 4,
         textTransform: 'uppercase',
@@ -57,7 +57,7 @@ const title = React.createElement(
         flexDirection: 'column',
         fontSize: 72,
         fontWeight: 600,
-        color: '#0d0d0d',
+        color: '#e6e6e3',
         lineHeight: 1.05,
       },
     },
@@ -68,7 +68,7 @@ const title = React.createElement(
 
 const footer = React.createElement(
   'div',
-  { style: { display: 'flex', justifyContent: 'space-between', color: '#4b4b4b', fontSize: 24 } },
+  { style: { display: 'flex', justifyContent: 'space-between', color: '#8a8a87', fontSize: 24 } },
   React.createElement('span', null, siteUrl.replace('https://', '')),
   React.createElement('span', null, 'Maintainable systems · developer tools · open source'),
 )
@@ -83,7 +83,7 @@ const element = React.createElement(
       flexDirection: 'column',
       justifyContent: 'space-between',
       padding: 64,
-      background: '#ffffff',
+      background: '#111110',
     },
   },
   logo,

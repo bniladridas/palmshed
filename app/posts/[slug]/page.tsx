@@ -52,10 +52,10 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <Badge tone="green">{post.topic}</Badge>
         <CopyLinkButton />
       </div>
-      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 36, lineHeight: 1.15, margin: 'var(--space-4) 0' }}>
+      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 34, lineHeight: 1.15, letterSpacing: '-0.02em', margin: 'var(--space-4) 0' }}>
         {post.title}
       </h1>
-      <p style={{ color: 'var(--ink-secondary)', fontSize: 14, margin: '0 0 var(--space-6)' }}>
+      <p style={{ color: 'var(--ink-secondary)', fontSize: 13, margin: '0 0 var(--space-6)' }}>
         {formatDate(post.date)} · {getReadingTime(Math.round(post.content.split(/\s+/).length))}
       </p>
       <CopyableBlock title="Post" content={post.plain} label="post">

@@ -6,10 +6,10 @@ export default function ColophonPage() {
   return (
     <div className="container" style={{ paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <p className="eyebrow">Colophon</p>
-      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, margin: 'var(--space-2) 0 var(--space-3)' }}>
+      <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 38, letterSpacing: '-0.02em', margin: 'var(--space-2) 0 var(--space-3)' }}>
         How this site is built
       </h1>
-      <p style={{ color: 'var(--ink-secondary)', fontSize: 18, maxWidth: '52ch' }}>
+      <p style={{ color: 'var(--ink-secondary)', fontSize: 17, lineHeight: 1.6, maxWidth: '52ch' }}>
         A static site that documents engineering work. The details below are part of the craft, so
         they get written down like everything else.
       </p>
@@ -33,11 +33,12 @@ All fonts are self-hosted through \`next/font\`. No third-party requests, no lay
 
 ## Color palette
 
-- Near-black \`#0d0d0d\`, white \`#ffffff\`, muted surfaces \`#f6f6f4\` and \`#e6f2ea\`.
-- Secondary ink \`#4b4b4b\`, hairline borders \`#e3e3e0\`.
-- A single green accent, \`#1f883d\`. If it's green, it's interactive.
+- Dark canvas \`#111110\`, light text \`#e6e6e3\`, muted surface \`#1a1a18\`.
+- Secondary ink \`#8a8a87\`, hairline borders \`#262623\`.
+- A single green accent, \`#3fb950\` (dark) / \`#1f883d\` (light). If it's green, it's interactive.
+- Dark is the default. Light mode is an override, not the base.
 
-Layout uses a 4px spacing scale and a 12-column grid.
+Layout uses a 4px spacing scale.
 
 ## Markdown pipeline
 
