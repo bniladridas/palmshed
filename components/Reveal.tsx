@@ -46,6 +46,7 @@ export default function Reveal({ children, delay = 0, className, style }: Reveal
       className={className}
       style={{
         ...style,
+        willChange: 'transform, opacity',
         opacity: visible ? 1 : 0,
         transform: visible ? 'none' : 'translateY(12px)',
         transition: `opacity 300ms ease ${delay}ms, transform 300ms ease ${delay}ms`,

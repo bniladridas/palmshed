@@ -45,6 +45,7 @@ export default function PalmMark() {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
+        willChange: 'transform',
         transition: 'transform 300ms ease',
         transform: hovered ? 'translateY(-1px)' : 'none',
       }}

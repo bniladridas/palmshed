@@ -314,6 +314,7 @@ a:hover {
   border: none;
   transition: background-color 120ms ease;
   text-decoration: none;
+  contain: layout style;
 }
 
 .button--primary {
@@ -393,6 +394,8 @@ a:hover {
 
 .card {
   transition: box-shadow 200ms ease;
+  will-change: transform;
+  contain: layout style;
 }
 
 .card:hover {
@@ -417,6 +420,11 @@ a:hover {
 
 .search-results {
   animation: fade-up 240ms ease;
+  will-change: transform, opacity;
+}
+
+.hero-mark {
+  will-change: transform;
 }
 
 a:focus-visible,
@@ -470,6 +478,10 @@ button:focus-visible {
 
   .action-row {
     flex-wrap: wrap;
+  }
+
+  .hero-mark {
+    display: none;
   }
 
   .footer-row {
