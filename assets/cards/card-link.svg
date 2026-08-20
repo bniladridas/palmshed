@@ -1,10 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" font-family="Inter, IBM Plex Sans, sans-serif">
   <rect width="1200" height="900" fill="#111110"/>
-  <rect x="0" y="0" width="1200" height="900" fill="none" stroke="#262623" stroke-width="1"/>
-  <text x="96" y="140" font-size="20" font-weight="600" letter-spacing="3" fill="#8a8a87">LINK</text>
-  <text x="96" y="380" font-size="56" font-weight="600" fill="#e6e6e3">Building in Public</text>
-  <text x="96" y="560" font-size="30" fill="#8a8a87">Weekly notes on Palmshed: the decisions,</text>
-  <text x="96" y="604" font-size="30" fill="#8a8a87">the failures, and the work.</text>
-  <line x1="96" y1="800" x2="1104" y2="800" stroke="#262623" stroke-width="1"/>
-  <text x="96" y="840" font-size="24" font-weight="500" fill="#3fb950">Read the series <tspan font-size="30">→</tspan></text>
+  <text x="600" y="420" font-size="32" font-weight="500" fill="#8a8a87" text-anchor="middle">Palmshed</text>
 </svg>
