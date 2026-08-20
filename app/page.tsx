@@ -231,11 +231,8 @@ export default function Home() {
               about both: systems design, code review, or building in public.
             </p>
             <div className="action-row" style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
-              <a href="mailto:hello@palmshed.dev" className="button button--primary">
+              <a href="mailto:bniladridas@gmail.com" className="button button--primary">
                 Email me
-              </a>
-              <a href={site.author.github} className="button button--secondary" target="_blank" rel="noopener noreferrer">
-                GitHub
               </a>
             </div>
           </Reveal>
