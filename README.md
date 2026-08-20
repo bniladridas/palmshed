@@ -1,122 +1,115 @@
-# Engineering Portfolio
+# Palmshed · Engineering Portfolio
 
-A version-controlled content library **and** a Next.js site for my public engineering presence: long-form articles, LinkedIn posts, portfolio cards, profile copy, design assets, and image prompts. All in one reusable source of truth.
+**A version-controlled content library and static site for public engineering work.**
 
-Everything here is production content, not placeholders. When a new article or asset is ready to publish, you pick the next completed piece instead of starting from scratch.
+Long-form articles, architecture notes, LinkedIn posts, portfolio cards, profile copy, design assets, and image prompts, all in one reusable source of truth. Everything here is production content, not placeholders.
 
-## What's inside
+## Abstract
+
+This repository contains both the **content** and the **site** that renders it. Content lives in `docs/` as Markdown with YAML front matter, version-controlled alongside the code. At build time, the files are read, parsed, and statically generated into pages. Editing the site is editing Markdown files in a pull request.
+
+The result is a durable, low-maintenance portfolio that documents engineering work without competing with it.
+
+## Repository Structure
 
 ```
 engineering-portfolio/
-├── README.md              # this file: how the library works
-├── package.json           # scripts for dev, build, validation, and stats
-├── app/                   # Next.js site (App Router)
-│   ├── page.tsx           # home
-│   ├── articles/          # article index + detail
-│   ├── posts/             # LinkedIn post index + detail
-│   ├── featured/          # portfolio cards
-│   ├── open-source/       # open source page
-│   ├── now/               # now page
-│   ├── about/             # profile rendered from docs/profile/
-│   ├── search/            # client-side search
-│   ├── search-index.json/ # build-time search index
-│   ├── sitemap.ts         # XML sitemap
-│   └── feed.xml/          # RSS feed
-├── components/            # header, cards, markdown, TOC, prev/next, …
-├── public/                # og.png (generated) + copied diagrams/favicon
-├── lib/                   # content + search + reading utilities
+├── app/                   Next.js site (App Router, React 19, TypeScript)
+│   ├── page.tsx           Home
+│   ├── articles/          Article index and detail
+│   ├── architecture/      Architecture notes
+│   ├── posts/             LinkedIn posts
+│   ├── featured/          Portfolio cards
+│   ├── open-source/       Open source page
+│   ├── about/             Profile rendered from docs/profile/
+│   ├── now/               Now page
+│   ├── changelog/         Changelog (rendered from CHANGELOG.md)
+│   ├── search/            Client-side search
+│   ├── colophon/          How this site is built
+│   ├── feed.xml/          RSS/Atom feed
+│   └── sitemap.ts         XML sitemap
+├── components/            Header, Footer, ContentCard, Markdown, TOC, etc.
+├── lib/                   Content reading, search, types, utilities
 ├── docs/
-│   ├── articles/          # 10 long-form engineering articles
-│   ├── linkedin/          # 20 LinkedIn posts
-│   ├── featured/          # 10 portfolio cards
-│   ├── profile/           # complete profile rewrite
-│   └── now.md             # "what I'm doing now" page content
+│   ├── articles/          11 long-form engineering articles
+│   ├── architecture/      8 architecture notes
+│   ├── linkedin/          21 LinkedIn posts
+│   ├── featured/          11 portfolio cards
+│   ├── profile/           Complete profile (9 sections)
+│   └── now.md             Now page content
 ├── assets/
-│   ├── cards/             # SVG card templates
-│   ├── icons/             # reusable SVG icons
-│   ├── logos/             # Palmshed brand assets
-│   └── diagrams/          # SVG diagrams embedded in articles
-├── prompts/               # image generation prompts
-├── design-system/         # colors, typography, spacing, components, cards
-├── templates/             # ready-to-fill templates for new content
-└── scripts/               # validate, stats, copy-assets, generate-og
+│   ├── diagrams/          SVG diagrams for articles
+│   ├── logos/             Palmshed brand marks
+│   ├── icons/             Reusable SVG icons
+│   └── cards/             SVG card templates
+├── design-system/         Colors, typography, spacing, components
+├── prompts/               Image generation prompt library
+├── templates/             Templates for new content
+└── scripts/               Build, validate, stats, OG generation
 ```
+
+## Design Principles
+
+The interface follows a quiet, monochrome-first aesthetic. Dark canvas as default. One green accent (`#3fb950`), the single living element in an otherwise still interface. The experience should feel like *someone carefully made this for me*, not *a company is trying to impress me*.
+
+**Typography:** Inter for body, IBM Plex Sans for display, IBM Plex Mono for code. All self-hosted via `next/font`. No third-party requests, no layout shift.
+
+**Color:** `#111110` canvas, `#e6e6e3` text, `#8a8a87` secondary, `#262623` borders. Light mode available as an override.
+
+**Spacing:** 4px base scale. Generous whitespace. Elements breathe.
+
+**Motion:** Stroke-draw entrance for the palm mark. Scroll-reveal for content. Interactions are fast, predictable, and almost invisible.
+
+## Running Locally
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # static export into out/
+npm run typecheck  # TypeScript check
+npm run validate   # content structure and front matter
+npm run stats      # content inventory and word counts
+```
+
+## Content Workflow
+
+1. Copy `templates/article.md` into `docs/articles/`.
+2. Fill in front matter (title, slug, date, tags, intro, references).
+3. Write the article body in Markdown.
+4. Add diagrams: drop an SVG into `assets/diagrams/`, reference as `![caption](/diagrams/name.svg)`.
+5. Run `npm run build`. The site regenerates automatically.
+
+## Deployment
+
+Deployed to GitHub Pages via GitHub Actions on every push to `main`.
+
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_BASE_PATH` | Prefixes all links and assets (required for project-path deployment) |
+| `NEXT_PUBLIC_SITE_URL` | Origin for canonical URLs, sitemap, RSS, and Open Graph |
+
+For a custom domain: add a `CNAME` file, point DNS at GitHub Pages, and clear the two env vars. The codebase defaults to domain-root URLs.
+
+## Content Inventory
+
+| Type | Count | Format |
+|---|---|---|
+| Articles | 11 | Long-form, with diagrams and references |
+| Architecture notes | 8 | Short, focused design decisions |
+| LinkedIn posts | 21 | Ready to publish |
+| Portfolio cards | 11 | Featured work |
+| Profile sections | 9 | Complete engineering profile |
 
 ## Voice
 
 Short sentences. Concrete and specific. No filler. First person, but humble. Claims are demonstrated, not asserted. Engineering honesty over marketing polish.
 
-## Run the site
-
-```bash
-npm install
-npm run dev       # local development (http://localhost:3000)
-npm run build     # static export into out/
-npx serve out     # preview the static export locally
-```
-
-## Deploy to GitHub Pages
-
-The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds the
-static export and publishes it to GitHub Pages on every push to `main`.
-
-The workflow sets two build-time env vars so the static export is path-aware:
-
-- `NEXT_PUBLIC_BASE_PATH=/<repo>`: prefixes every internal link and asset URL (via `basePath` +
-  `assetPrefix`), which is required because GitHub Pages serves project sites under
-  `/engineering-portfolio/` rather than the domain root.
-- `NEXT_PUBLIC_SITE_URL=https://<user>.github.io`: origin used for canonical URLs, sitemap, RSS,
-  and Open Graph.
-
-One-time setup (repo settings → Pages):
-
-1. Set **Source** to **GitHub Actions**.
-2. Push to `main`: the workflow builds `out/` and deploys it.
-3. If this repo is private, GitHub Pages requires a paid plan; make the repo public (or upgrade)
-   for the deployment to succeed.
-
-Custom domain (optional):
-
-- When the site moves to a real domain (e.g. `notes.palmshed.dev`), add a `CNAME` file at the repo
-  root containing the domain, point the DNS record at GitHub Pages, and drop the two env vars from
-  the workflow (or set `NEXT_PUBLIC_BASE_PATH=` empty). The codebase defaults to domain-root URLs,
-  so no code changes are needed. The switch is a single environment variable.
-- Until then, no `CNAME` is needed. The site lives at `https://<user>.github.io/engineering-portfolio/`.
-
-`404.html` is generated automatically by the static export.
-
-## Content workflow
-
-Content lives in `docs/` and is read at build time. To publish:
-
-1. Add an article: copy `templates/article.md` into `docs/articles/`, fill it in, and add a matching post in `docs/linkedin/`.
-2. Diagrams: drop an SVG into `assets/diagrams/`, then reference it in the article as `![caption](/diagrams/name.svg)`.
-3. `npm run build`: the site regenerates automatically.
-
-## Utilities
-
-```bash
-npm run validate     # checks structure, front matter, and sections
-npm run stats        # content inventory and word counts
-npm run typecheck    # TypeScript check
-```
-
-## Before you publish: checklist
-
-- **Real URLs:** article `references:` point at the real repos under `github.com/palmshed` (the `kit` CLI and the `auth` platform) via `site.github` in `lib/site.ts`. Verify links on the live site after deployment.
-- **Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for canonical URLs, sitemap, RSS, OG images). When
-  deploying at a sub-path, also set `NEXT_PUBLIC_BASE_PATH` so all links and assets are prefixed.
-- **Open Graph:** `scripts/generate-og.mjs` renders `public/og.png` at build time; verify the social card after deployment.
-- **Accessibility:** run an axe scan and a Lighthouse pass before linking from LinkedIn.
-
 ## Status
 
-- [x] Articles: 11 (each with diagrams, references, and concrete examples)
-- [x] LinkedIn posts: 21
-- [x] Portfolio cards: 11
-- [x] Architecture notes: 8
-- [x] Profile: complete
-- [x] Design system: documented
-- [x] Assets: SVG cards, icons, logo, diagrams
-- [x] Prompts: image prompt library
-- [x] Site: Next.js, static export, search, RSS, sitemap, JSON-LD
+Everything is production content. The site is live, the content is real, and the references point at actual repositories.
+
+See `CHANGELOG.md` for the complete record of changes.
+
+## License
+
+This is a personal engineering portfolio. The content and design are part of the work they document.
